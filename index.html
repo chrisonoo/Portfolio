@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="img/logo.svg" type="image/svg" rel="icon" />
+        <title>Portfolio - Krzysztof (Chris) Zygmunt</title>
+
+        <!-- Scripts -->
+        <script src="js/app.js" async defer></script>
+        <script src="https://platform.linkedin.com/badges/js/profile.js" type="text/javascript" async defer></script>
+
+        <!-- Styles -->
+        <link href="css/main.css" rel="stylesheet" />
+        <link href="css/app.css" rel="stylesheet" />
+        <link href="css/style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="app" class="antialiased bg-gray-900 min-h-screen" v-lazy-container="{ selector: 'img' }">
+            <!-- Top menu -->
+            <nav class="sbg-gray-900 nav-fixed">
+                <!-- Desktop menu-->
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex items-center justify-between h-20">
+                        <!-- Text menu -->
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0">
+                                <a href="index.html"><img alt="logo" data-src="img/logo.svg" /></a>
+                            </div>
+                            <div class="hidden md:block md:ml-6" x-data="{ showMore: false }">
+                                <div class="flex space-x-4">
+                                    <a
+                                        href="#about-me"
+                                        class="text-gray-300 hover:text-primary-200 px-3 py-2 text-sm font-medium transition ease-out duration-300"
+                                        >About Me</a
+                                    >
+                                    <a
+                                        href="#my-projects"
+                                        class="text-gray-300 hover:text-primary-200 px-3 py-2 text-sm font-medium transition ease-out duration-300"
+                                        >My Projects</a
+                                    >
+                                    <a
+                                        href="#skills"
+                                        class="text-gray-300 hover:text-primary-200 px-3 py-2 text-sm font-medium transition ease-out duration-300"
+                                        >My Skills</a
+                                    >
+                                    <a
+                                        href="#technologies"
+                                        class="text-gray-300 hover:text-primary-200 px-3 py-2 text-sm font-medium transition ease-out duration-300"
+                                        >Technologies</a
+                                    >
+                                    <a
+                                        href="#contact"
+                                        class="text-gray-300 hover:text-primary-200 px-3 py-2 text-sm font-medium transition ease-out duration-300"
+                                        >Contact</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden lg:ml-6 lg:block">
+                            <a
+                                href="#contact"
+                                class="px-4 py-2 border border-transparent text-sm font-medium rounded-md text-gray-700 bg-primary-100 shadow-sm hover:bg-primary-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                <span>Download my CV</span>
+                            </a>
+                        </div>
+                        <!-- END: Text menu -->
+
+                        <!-- Mobile menu button-->
+                        <div class="-mr-2 flex md:hidden">
+                            <button
+                                class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                                type="button"
+                                @click="menuOpen = !menuOpen"
+                                aria-controls="mobile-menu"
+                                aria-expanded="false">
+                                <span class="sr-only">Open main menu</span>
+                                <svg
+                                    class="h-6 w-6"
+                                    :class="{'hidden': menuOpen, 'block': !menuOpen }"
+                                    aria-hidden="true"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                </svg>
+                                <svg
+                                    class="h-6 w-6"
+                                    :class="{'block': menuOpen, 'hidden': !menuOpen }"
+                                    aria-hidden="true"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                </svg>
+                            </button>
+                        </div>
+                        <!-- END: Mobile menu button -->
+                    </div>
+                </div>
+                <!-- END: Desktop menu -->
+
+                <!-- Mobile menu -->
+                <div id="mobile-menu" class="md:hidden" v-show="menuOpen">
+                    <div class="px-2 pt-2 pb-3 space-y-1">
+                        <a href="#about-me" class="text-white flex items-center px-3 py-3 text-base font-medium">
+                            <svg
+                                class="flex-shrink-0 h-6 w-6 text-primary-100"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"></path>
+                            </svg>
+                            <span class="ml-2">About Me</span>
+                        </a>
+                        <a href="#my-projects" class="text-white flex items-center px-3 py-3 text-base font-medium" target="">
+                            <svg
+                                class="flex-shrink-0 h-6 w-6 text-primary-100"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                                <path
+                                    d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
+                                <path
+                                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"></path>
+                            </svg>
+                            <span class="ml-2">My Projects</span>
+                        </a>
+                        <a href="#skills" class="text-white flex items-center px-3 py-3 text-base font-medium">
+                            <svg
+                                class="flex-shrink-0 h-6 w-6 text-primary-100"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"></path>
+                            </svg>
+                            <span class="ml-2">My Skills</span>
+                        </a>
+                        <a href="#technologies" class="text-white flex items-center px-3 py-3 text-base font-medium">
+                            <svg
+                                class="flex-shrink-0 h-6 w-6 text-primary-100"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"></path>
+                                <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                            </svg>
+                            <span class="ml-2">Technologies</span>
+                        </a>
+
+                        <a href="#contact" class="text-white flex items-center px-3 py-3 text-base font-medium">
+                            <svg
+                                class="flex-shrink-0 h-6 w-6 text-primary-100"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"></path>
+                            </svg>
+                            <span class="ml-2">Contact</span>
+                        </a>
+
+                        <a href="#contact" class="text-white flex items-center px-3 py-3 text-base font-medium">
+                            <svg
+                                class="flex-shrink-0 h-6 w-6 text-primary-100"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"></path>
+                            </svg>
+                            <span class="ml-2">Download my CV</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- END: Mobile menu -->
+            </nav>
+            <!-- END: Top menu -->
+
+            <main>
+                <!-- Section About Me -->
+                <div id="about-me" class="pt-10 bg-gray-900 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
+                    <div class="mx-auto max-w-7xl lg:px-8">
+                        <div class="lg:flex gap-8">
+                            <!-- Text -->
+                            <div
+                                class="mx-auto max-w-md px-4 flex-grow-3 flex-shrink-0 sm:max-w-2xl sm:px-6 lg:px-0 lg:text-left lg:flex lg:items-center">
+                                <div class="lg:py-24">
+                                    <h1
+                                        class="mt-4 text-3xl leading-none tracking-tight font-extrabold text-white sm:mt-5 sm:text-5xl lg:mt-6 xl:text-5xl">
+                                        <span>Born to fly</span><br />
+                                        <span class="text-primary-100">in the programming sky</span>
+                                    </h1>
+                                    <p class="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                                        Hello, I'm Krzysztof, but feel free to call me Chris. I'm a budding full-stack programmer with a special focus
+                                        on
+                                        <span class="font-bold accent-bold">.NET</span> and <span class="font-bold accent-bold">SQL</span>. Passionate
+                                        about problem-solving, I enjoy crafting efficient backend and frontend solutions.
+                                    </p>
+                                    <p class="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                                        Currently in the final stretch of my university journey in business application programming, I'm set to earn
+                                        my bachelor's degree later this year. Continually inspired by the vast landscape of programming, it's fair to
+                                        say I'm soaring high with every line of code!
+                                    </p>
+                                    <div class="mt-10 sm:mt-12">
+                                        <a
+                                            href="#contact"
+                                            class="py-3 px-4 rounded-md shadow bg-primary-100 text-gray-900 font-medium hover:bg-primary-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 focus:ring-offset-gray-900"
+                                            >Contact Me</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END: Text -->
+
+                            <!-- Graphic -->
+                            <div class="mt-12">
+                                <div class="mx-auto max-w-md px-4 flex-grow-2 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
+                                    <!-- Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ -->
+                                    <img class="w-full lg:h-full lg:w-auto lg:max-w-none" alt="travel" data-src="img/travel.png" />
+                                </div>
+                            </div>
+                            <!-- END: Graphic -->
+                        </div>
+                    </div>
+                </div>
+                <!-- END: Section looking -->
+
+                <!-- Section My Projects -->
+                <div id="my-projects" class="bg-gray-800">
+                    <div class="max-w-4xl mx-auto px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:pt-24 lg:px-8">
+                        <!-- Introduction -->
+                        <div>
+                            <h2 class="text-3xl font-extrabold text-white tracking-tight">
+                                <span>My</span>
+                                <span class="text-primary-100">Projects</span>
+                            </h2>
+                            <p class="mt-4 max-w-3xl text-lg text-gray-300">
+                                Here's a showcase of my coding adventures from
+                                <a href="https://www.wsb-nlu.edu.pl/en/about-wsb-nlu" class="underline accent-link">WSB - National Louis University</a
+                                >, <a href="https://www.getacademy.no/" class="underline accent-link">GetAcademy</a> and
+                                <a href="https://jobloop.no/kodehode-modellen" class="underline accent-link">Kodehode (It utvikler AMO)</a>.
+                            </p>
+                            <p class="mt-4 max-w-3xl text-lg text-gray-300">
+                                These projects, focused on understanding key coding concepts, have not only honed my programming skills but also
+                                enhanced my project planning and management abilities through time spent on documentation.
+                            </p>
+                            <p class="mt-4 max-w-3xl text-lg text-gray-300">
+                                <br />
+                                <img
+                                    class=""
+                                    alt="completed project"
+                                    data-src="img/projects/completed-project.svg"
+                                    style="width: 32px; display: inline" />
+                                - Completed Projects<br />
+                                <img
+                                    class=""
+                                    alt="projects under development"
+                                    data-src="img/projects/projects-under-development.svg"
+                                    style="width: 32px; display: inline" />
+                                - Projects Under Development<br />
+                                <img
+                                    class=""
+                                    alt="planned projects"
+                                    data-src="img/projects/planned-projects.svg"
+                                    style="width: 32px; display: inline" />
+                                - Planned Projects
+                            </p>
+                        </div>
+                        <!-- END: Introduction -->
+
+                        <!-- .NET Projects -->
+                        <h2 class="mt-12 mb-8 lg:mt-16 lg:mb-12 text-3xl font-extrabold text-white tracking-tight">
+                            <span>.NET</span>
+                            <span class="text-primary-100">Projects</span>
+                        </h2>
+                        <div class="grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
+                            <!-- Project Gym Manager -->
+                            <div>
+                                <div>
+                                    <h3 class="mb-4 text-lg font-medium text-white">Gym Manager</h3>
+                                    <div style="position: relative">
+                                        <img class="" alt="gym manager" data-src="img/projects/gym-manager.png" />
+                                        <img
+                                            alt="completed project"
+                                            data-src="img/projects/planned-projects.svg"
+                                            style="position: absolute; bottom: 8px; right: 8px; width: 48px" />
+                                    </div>
+                                    <p class="mt-3 text-base text-gray-300">
+                                        Full-stack project, login functionality, payments, deployment on Azure.
+                                        <a href="https://github.com/chrisonoo/GymManager" class="underline">Open in GitHub</a>
+                                    </p>
+                                </div>
+                                <div class="flex justify-center gap-2 mt-3">
+                                    <img alt="dotnet" data-src="img/logos/dotnet.svg" width="32" />
+                                    <img alt="sharp" data-src="img/logos/csharp.svg" width="32" />
+                                    <img alt="sql server" data-src="img/logos/sqlserver.svg" width="32" />
+                                    <img alt="html5" data-src="img/logos/html5.svg" width="32" />
+                                    <img alt="css3" data-src="img/logos/css3.svg" width="32" />
+                                    <img alt="js" data-src="img/logos/js.svg" width="32" />
+                                    <img alt="git" data-src="img/logos/git.svg" width="32" />
+                                    <img alt="github" data-src="img/logos/github.svg" width="32" />
+                                    <img alt="visual studio" data-src="img/logos/vs.svg" width="32" />
+                                </div>
+                            </div>
+                            <!-- END: Project Gym Manager -->
+
+                            <!-- Project Service Radar MVC -->
+                            <div>
+                                <div>
+                                    <h3 class="mb-4 text-lg font-medium text-white">Service Radar</h3>
+                                    <div style="position: relative">
+                                        <img class="" alt="service radar" data-src="img/projects/service-radar.png" />
+                                        <img
+                                            alt="completed project"
+                                            data-src="img/projects/projects-under-development.svg"
+                                            style="position: absolute; bottom: 8px; right: 8px; width: 48px" />
+                                    </div>
+                                    <p class="mt-3 text-base text-gray-300">
+                                        Clean Architecture, MediaR, AutoMapper, FluentValidation.
+                                        <a href="https://github.com/chrisonoo/ServiceRadar" class="underline">Open in GitHub</a>
+                                    </p>
+                                </div>
+                                <div class="flex justify-center gap-2 mt-3">
+                                    <img alt="dotnet" data-src="img/logos/dotnet.svg" width="32" />
+                                    <img alt="sharp" data-src="img/logos/csharp.svg" width="32" />
+                                    <img alt="sql server" data-src="img/logos/sqlserver.svg" width="32" />
+                                    <img alt="html5" data-src="img/logos/html5.svg" width="32" />
+                                    <img alt="css3" data-src="img/logos/css3.svg" width="32" />
+                                    <img alt="js" data-src="img/logos/js.svg" width="32" />
+                                    <img alt="git" data-src="img/logos/git.svg" width="32" />
+                                    <img alt="github" data-src="img/logos/github.svg" width="32" />
+                                    <img alt="visual studio" data-src="img/logos/vs.svg" width="32" />
+                                </div>
+                            </div>
+                            <!-- END: Project Service Radar MVC -->
+
+                            <!-- Project Book Worm MVC -->
+                            <div>
+                                <div>
+                                    <h3 class="mb-4 text-lg font-medium text-white">Book Worm MVC</h3>
+                                    <div style="position: relative">
+                                        <img class="" alt="book worm mvc" data-src="img/projects/book-worm.png" />
+                                        <img
+                                            alt="completed project"
+                                            data-src="img/projects/completed-project.svg"
+                                            style="position: absolute; bottom: 8px; right: 8px; width: 48px" />
+                                    </div>
+                                    <p class="mt-3 text-base text-gray-300">
+                                        Training in database relationships and ViewModel classes.
+                                        <a href="https://github.com/chrisonoo/BookWormMVC" class="underline">Open in GitHub</a>
+                                    </p>
+                                </div>
+                                <div class="flex justify-center gap-2 mt-3">
+                                    <img alt="dotnet" data-src="img/logos/dotnet.svg" width="32" />
+                                    <img alt="sharp" data-src="img/logos/csharp.svg" width="32" />
+                                    <img alt="sql server" data-src="img/logos/sqlserver.svg" width="32" />
+                                    <img alt="html5" data-src="img/logos/html5.svg" width="32" />
+                                    <img alt="css3" data-src="img/logos/css3.svg" width="32" />
+                                    <img alt="js" data-src="img/logos/js.svg" width="32" />
+                                    <img alt="git" data-src="img/logos/git.svg" width="32" />
+                                    <img alt="github" data-src="img/logos/github.svg" width="32" />
+                                    <img alt="visual studio" data-src="img/logos/vs.svg" width="32" />
+                                </div>
+                            </div>
+                            <!-- END: Project Book Worm MVC -->
+                        </div>
+                        <!-- END: .NET Projects -->
+
+                        <!-- Other Technologies Projects -->
+                        <h2 class="mt-12 mb-8 lg:mt-16 lg:mb-12 text-3xl font-extrabold text-white tracking-tight">
+                            <span>Other Technologies</span>
+                            <span class="text-primary-100">Projects</span>
+                        </h2>
+                        <div class="grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
+                            <!-- Project Portfolio -->
+                            <div>
+                                <div>
+                                    <h3 class="mb-4 text-lg font-medium text-white">Portfolio</h3>
+                                    <div style="position: relative">
+                                        <img class="" alt="portfolio" data-src="img/projects/portfolio.png" />
+                                        <img
+                                            class=""
+                                            alt="projects under development"
+                                            data-src="img/projects/projects-under-development.svg"
+                                            style="position: absolute; bottom: 8px; right: 8px; width: 48px" />
+                                    </div>
+                                    <p class="mt-3 text-base text-gray-300">
+                                        A project that presents my other projects. As much automation as possible.
+                                        <a href="https://github.com/chrisonoo/Portfolio" class="underline">Open in GitHub</a>
+                                    </p>
+                                </div>
+                                <div class="flex justify-center gap-2 mt-3">
+                                    <img alt="sass" data-src="img/logos/sass.svg" width="32" />
+                                    <img alt="js" data-src="img/logos/js.svg" width="32" />
+                                    <img alt="php" data-src="img/logos/php.svg" width="32" />
+                                    <img alt="composer" data-src="img/logos/composer.svg" width="32" />
+                                    <img alt="laravel" data-src="img/logos/laravel.svg" width="32" />
+                                    <img alt="webpack" data-src="img/logos/webpack.svg" width="32" />
+                                    <img alt="git" data-src="img/logos/git.svg" width="32" />
+                                    <img alt="github" data-src="img/logos/github.svg" width="32" />
+                                    <img alt="phpstorm" data-src="img/logos/phpstorm.svg" width="32" />
+                                </div>
+                            </div>
+                            <!-- END: Project Portfolio -->
+
+                            <!-- Project Clinic Laravel MVC -->
+                            <div>
+                                <div>
+                                    <h3 class="mb-4 text-lg font-medium text-white">Clinic Laravel MVC</h3>
+                                    <div style="position: relative">
+                                        <img class="" alt="clinic laravel mvc" data-src="img/projects/laravel-clinic.png" />
+                                        <img
+                                            class=""
+                                            alt="completed project"
+                                            data-src="img/projects/completed-project.svg"
+                                            style="position: absolute; bottom: 8px; right: 8px; width: 48px" />
+                                    </div>
+                                    <p class="mt-3 text-base text-gray-300">
+                                        Extensive Laravel app with migrations and seeders.
+                                        <a href="https://github.com/chrisonoo/ClinicLaravelMVC" class="underline">Open in GitHub</a>
+                                    </p>
+                                </div>
+                                <div class="flex justify-center gap-2 mt-3">
+                                    <img alt="php" data-src="img/logos/php.svg" width="32" />
+                                    <img alt="composer" data-src="img/logos/composer.svg" width="32" />
+                                    <img alt="laravel" data-src="img/logos/laravel.svg" width="32" />
+                                    <img alt="webpack" data-src="img/logos/webpack.svg" width="32" />
+                                    <img alt="git" data-src="img/logos/git.svg" width="32" />
+                                    <img alt="github" data-src="img/logos/github.svg" width="32" />
+                                    <img alt="phpstorm" data-src="img/logos/phpstorm.svg" width="32" />
+                                </div>
+                            </div>
+                            <!-- END: Project Clinic Laravel MVC -->
+
+                            <!-- Project Calculator With Themes -->
+                            <div>
+                                <div>
+                                    <h3 class="mb-4 text-lg font-medium text-white">Calculator With Themes</h3>
+                                    <div style="position: relative">
+                                        <img class="" alt="calculator with themes" data-src="img/projects/calculator.png" />
+                                        <img
+                                            class=""
+                                            alt="completed project"
+                                            data-src="img/projects/completed-project.svg"
+                                            style="position: absolute; bottom: 8px; right: 8px; width: 48px" />
+                                    </div>
+                                    <p class="mt-3 text-base text-gray-300">
+                                        A calculator where you can change skins and calculate large numbers.
+                                        <a href="https://github.com/chrisonoo/CalculatorWithThemes" class="underline">Open in GitHub</a>
+                                    </p>
+                                </div>
+                                <div class="flex justify-center gap-2 mt-3">
+                                    <img alt="html5" data-src="img/logos/html5.svg" width="32" />
+                                    <img alt="css3" data-src="img/logos/css3.svg" width="32" />
+                                    <img alt="js" data-src="img/logos/js.svg" width="32" />
+                                    <img alt="git" data-src="img/logos/git.svg" width="32" />
+                                    <img alt="github" data-src="img/logos/github.svg" width="32" />
+                                    <img alt="phpstorm" data-src="img/logos/phpstorm.svg" width="32" />
+                                </div>
+                            </div>
+                            <!-- END: Project Calculator With Themes -->
+
+                            <!-- Project Sliding Puzzle-->
+                            <div>
+                                <div>
+                                    <h3 class="mb-4 text-lg font-medium text-white">Sliding Puzzle</h3>
+                                    <div style="position: relative">
+                                        <img class="" alt="sliding puzzle" data-src="img/projects/puzzle.png" />
+                                        <img
+                                            class=""
+                                            alt="completed project"
+                                            data-src="img/projects/completed-project.svg"
+                                            style="position: absolute; bottom: 8px; right: 8px; width: 48px" />
+                                    </div>
+                                    <p class="mt-3 text-base text-gray-300">
+                                        Who is unfamiliar? You can play on GitHub 😁
+                                        <a href="https://github.com/chrisonoo/SlidingPuzzle" class="underline">Open in GitHub</a>
+                                    </p>
+                                </div>
+                                <div class="flex justify-center gap-2 mt-3">
+                                    <img alt="html5" data-src="img/logos/html5.svg" width="32" />
+                                    <img alt="css3" data-src="img/logos/css3.svg" width="32" />
+                                    <img alt="js" data-src="img/logos/js.svg" width="32" />
+                                    <img alt="git" data-src="img/logos/git.svg" width="32" />
+                                    <img alt="github" data-src="img/logos/github.svg" width="32" />
+                                    <img alt="phpstorm" data-src="img/logos/phpstorm.svg" width="32" />
+                                </div>
+                            </div>
+                            <!-- END: Project Sliding Puzzle-->
+
+                            <!-- Project Fagfolk Modal Window MVC -->
+                            <div>
+                                <div>
+                                    <h3 class="mb-4 text-lg font-medium text-white">Fagfolk Modal Window MVC</h3>
+                                    <div style="position: relative">
+                                        <img class="" alt="fagfolk modal window mvc" data-src="img/projects/fagfolk-module.png" />
+                                        <img
+                                            class=""
+                                            alt="completed project"
+                                            data-src="img/projects/completed-project.svg"
+                                            style="position: absolute; bottom: 8px; right: 8px; width: 48px" />
+                                    </div>
+                                    <p class="mt-3 text-base text-gray-300">
+                                        Quite a challenge and interesting technologies.
+                                        <a href="https://github.com/chrisonoo/FagfolkModalWindowMVC" class="underline">Open in GitHub</a>
+                                    </p>
+                                </div>
+                                <div class="flex justify-center gap-2 mt-3">
+                                    <img alt="html" data-src="img/logos/html5.svg" width="32" />
+                                    <img alt="css" data-src="img/logos/css3.svg" width="32" />
+                                    <img alt="javascript" data-src="img/logos/js.svg" width="32" />
+                                    <img alt="jquery" data-src="img/logos/jquery.svg" width="32" />
+                                    <img alt="firebase" data-src="img/logos/firebase.svg" width="32" />
+                                    <img alt="git" data-src="img/logos/git.svg" width="32" />
+                                    <img alt="github" data-src="img/logos/github.svg" width="32" />
+                                    <img alt="phpstorm" data-src="img/logos/phpstorm.svg" width="32" />
+                                </div>
+                            </div>
+                            <!-- END: Project Fagfolk Modal Window MVC-->
+                        </div>
+                        <!-- END: Other Technologies Projects -->
+                    </div>
+                </div>
+                <!-- END: Section My Projects -->
+
+                <!-- Section skills -->
+                <div id="skills" class="relative bg-gray-900">
+                    <!-- Picture -->
+                    <div class="display-none h-80 absolute bottom-0 xl:inset-0 xl:h-full xl:w-full xl:block">
+                        <div class="h-full w-full xl:grid xl:grid-cols-2">
+                            <div class="h-full xl:relative xl:col-start-2">
+                                <img
+                                    class="h-full w-full object-cover xl:absolute xl:inset-0"
+                                    alt="People working on laptops"
+                                    data-src="img/chris.png" />
+                                <div
+                                    class="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-gray-900 xl:inset-y-0 xl:left-0 xl:h-full xl:w-32 xl:bg-gradient-to-r"
+                                    aria-hidden="true"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Picture -->
+
+                    <!-- Text module -->
+                    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-cols-2 xl:grid-flow-col-dense xl:gap-x-8">
+                        <div class="relative pt-4 pb-4 sm:pt-8 xl:col-start-1">
+                            <!-- Description -->
+                            <p class="mt-3 text-3xl font-extrabold text-gray-50">
+                                <span>My</span>
+                                <span class="text-primary-100">skills</span>
+                            </p>
+                            <p class="mt-5 text-lg text-gray-300">
+                                Originally trained in <span class="font-bold accent-bold">construction</span>, I bravely embarked on a significant
+                                career change to software development at the age of 44 in 2019. Fueled by my need for fresh challenges and a burning
+                                desire to create, I found myself drawn to the world of programming - a completely different landscape. Four years
+                                later, this transformative journey is culminating in my upcoming graduation with a degree in
+                                <span class="font-bold accent-bold">Business Applications Programming.</span>
+                            </p>
+                            <p class="mt-5 text-lg text-gray-300">
+                                My journey into the tech world began at
+                                <a href="https://www.getacademy.no/" class="underline accent-link">GetAcademy</a> and
+                                <a href="https://jobloop.no/kodehode-modellen" class="underline accent-link">Kodehode (It utvikler AMO)</a>, where I
+                                laid a robust foundation in various programming languages and technologies. Today, I am further enhancing my prowess
+                                in business applications and cybersecurity at
+                                <a href="https://www.wsb-nlu.edu.pl/en/about-wsb-nlu" class="underline accent-link">WSB - National Louis University</a
+                                >, while concurrently working on an engineering project leveraging
+                                <span class="font-bold accent-bold">ASP.NET Core 6 MVC</span>.
+                            </p>
+                            <p class="mt-5 text-lg text-gray-300">
+                                As a budding software developer, I'm keen to apply my knowledge and skills in a professional setting for the first
+                                time. I'm excited to bring my life and professional experience, providing a unique perspective to software development
+                                tasks. <span class="font-bold accent-bold">Eager to commence my journey</span> in the industry, I am actively seeking
+                                employment opportunities where I can continue to grow and create.
+                            </p>
+                            <!-- END: Description -->
+                        </div>
+                    </div>
+                    <!-- END: Text module -->
+                </div>
+
+                <div class="relative bg-gray-900">
+                    <!-- Text module -->
+                    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+                        <div class="relative pt-4 pb-4 sm:pt-12">
+                            <!-- Skill modules -->
+                            <div class="mt-8 grid grid-cols-1 gap-y-12 gap-x-6 sm:grid-cols-2">
+                                <div class="prose text-gray-300 m-4">
+                                    <p>
+                                        <span class="block text-xl font-bold text-gray-50">Core Competencies</span>
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            <span class="font-bold">.NET Development:</span> Specialized in Web, Mobile, and Desktop applications
+                                            using C# and SQL.
+                                        </li>
+                                        <li>
+                                            <span class="font-bold">Other Programming Languages:</span> Familiar with Python, PHP, Java, C, C++, JS,
+                                            Node.js.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="prose text-gray-300 m-4">
+                                    <p>
+                                        <span class="block text-xl font-bold text-gray-50">Project Management</span>
+                                    </p>
+                                    <ul>
+                                        <li>Familiar with Agile and Scrum methodologies.</li>
+                                        <li>Skilled in Software and System Engineering.</li>
+                                        <li>Application architecture e.g. Clean Architecture, Microservices.</li>
+                                        <li>
+                                            Enjoys understanding and being part of the entire process of software development from conception to
+                                            deployment.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="prose text-gray-300 m-4">
+                                    <p>
+                                        <span class="block text-xl font-bold text-gray-50">Soft Skills</span>
+                                    </p>
+                                    <ul>
+                                        <li>Highly collaborative with excellent communication skills.</li>
+                                        <li>Goal-oriented, capable of looking from various perspectives.</li>
+                                        <li>Strong problem-solving and analytical abilities.</li>
+                                        <li>Long-term determination in implementing ideas.</li>
+                                    </ul>
+                                </div>
+                                <div class="prose text-gray-300 m-4">
+                                    <p>
+                                        <span class="block text-xl font-bold text-gray-50">Continuous Learning</span>
+                                    </p>
+                                    <ul>
+                                        <li>Highly adaptable and able to learn new technologies quickly.</li>
+                                        <li>
+                                            Always eager to learn new technologies and methodologies to expand my skill set and create effective
+                                            solutions.
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div id="technologies"></div>
+                                <!-- Give id to menu to scroll the page -->
+                            </div>
+                            <!-- END: Skill modules -->
+                        </div>
+                    </div>
+                    <!-- END: Text module -->
+                </div>
+                <!-- END: Section skills -->
+
+                <!-- Section technologies -->
+                <div class="bg-gray-900">
+                    <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:py-8 lg:px-8">
+                        <p class="text-center mx-4 text-base font-semibold uppercase text-gray-600 tracking-wider">
+                            My Daily Development Toolkit & Ongoing Learning
+                        </p>
+                        <div class="mt-6 grid grid-cols-3 gap-0.5 md:grid-cols-6 lg:mt-8">
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="dotnet" data-src="img/logos/dotnet.svg" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">.NET</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="csharp" data-src="img/logos/csharp.svg" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">C#</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="maui" data-src="img/logos/maui.svg" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">.NET MAUI</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="xamarin" data-src="img/logos/xamarin.svg" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">Xamarin</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="visual studio" data-src="img/logos/vs.svg" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">Visual Studio</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="resharper" data-src="img/logos/resharper.svg" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">ReSharper</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="sql server" data-src="img/logos/sqlserver.svg" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">SQL Server</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="microsoft azure" data-src="img/logos/azure.svg" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">Microsoft Azure</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="html 5" data-src="img/logos/html5.svg" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">HTML</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="css 3" data-src="img/logos/css3.svg" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">CSS</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="sass" data-src="img/logos/sass.svg" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">Sass</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="bootstrap" data-src="img/logos/bootstrap.svg" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">Bootstrap</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="materialize" data-src="img/logos/materialize.svg" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">Materialize</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="tailwind" data-src="img/logos/tailwind.svg" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">Tailwind</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="javascript" data-src="img/logos/js.svg" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">JavaScript</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="jQuery" data-src="img/logos/jquery.svg" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">jQuery</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="type script" data-src="img/logos/ts.svg" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">TypeScript</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="visual studio code" data-src="img/logos/vsc.svg" height="64" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">VS Code</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="git" data-src="img/logos/git.svg" height="64" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">Git</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="github" data-src="img/logos/github.svg" height="64" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">GitHub</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="markdown" data-src="img/logos/md.svg" height="64" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">Markdown</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="docker" data-src="img/logos/docker.svg" height="64" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">Docker</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:py-16 lg:px-8">
+                        <p class="text-center mx-4 text-base font-semibold uppercase text-gray-600 tracking-wider">
+                            Supplementary Development Toolkit
+                        </p>
+                        <div class="mt-6 grid grid-cols-3 gap-0.5 md:grid-cols-6 lg:mt-8">
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="handlebars" data-src="img/logos/handlebars.svg" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">Handlebars</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="node" data-src="img/logos/node.svg" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">Node.js</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="express" data-src="img/logos/express.svg" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">Express</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="angular" data-src="img/logos/angular.svg" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">Angular</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="firebase" data-src="img/logos/firebase.svg" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">Firebase</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="react" data-src="img/logos/react.svg" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">React</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="next" data-src="img/logos/nextjs.svg" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">Next.js</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="mongodb" data-src="img/logos/mongodb.svg" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">MongoDB</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="eslint" data-src="img/logos/eslint.svg" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">ESLint</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="babel" data-src="img/logos/babel.svg" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">Babel</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="webpack" data-src="img/logos/webpack.svg" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">Webpack</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="heroku" data-src="img/logos/heroku.svg" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">Heroku</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="php" data-src="img/logos/php.svg" height="64" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">Php</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="composer" data-src="img/logos/composer.svg" height="64" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">Composer</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="laravel" data-src="img/logos/laravel.svg" height="64" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">Laravel</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="mariadb" data-src="img/logos/mariadb.svg" height="64" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">MariaDB</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="phpstorm" data-src="img/logos/phpstorm.svg" height="64" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">PhpStorm</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="xampp" data-src="img/logos/xampp.svg" height="64" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">Xampp</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="apache" data-src="img/logos/apache.svg" height="64" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">Apache</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="nginx" data-src="img/logos/nginx.svg" height="64" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">Nginx</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="python" data-src="img/logos/python.svg" height="64" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">Python</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="conda" data-src="img/logos/conda.svg" height="64" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">Conda</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="jupyter" data-src="img/logos/jupyter.svg" height="64" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">Jupyter</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="tensorflow" data-src="img/logos/tensorflow.svg" height="64" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">TensorFlow</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="numpy" data-src="img/logos/numpy.svg" height="64" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">NumPy</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="django" data-src="img/logos/django.svg" height="64" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">Django</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="postgresql" data-src="img/logos/postgresql.svg" height="64" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">PostgreSQL</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="pycharm" data-src="img/logos/pycharm.svg" height="64" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">PyCharm</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="kubernetes" data-src="img/logos/kubernetes.svg" height="64" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">Kubernetes</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="java" data-src="img/logos/java.svg" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">Java</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="internet of things" data-src="img/logos/iot.svg" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">IoT</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="arduino" data-src="img/logos/arduino.svg" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">Arduino</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="raspberry pi" data-src="img/logos/raspberrypi.svg" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">Raspberry Pi</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="c" data-src="img/logos/c.svg" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">C</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="c plus plus" data-src="img/logos/cplusplus.svg" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">C++</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="figma" data-src="img/logos/figma.svg" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">Figma</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="unified modeling language" data-src="img/logos/uml.svg" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">UML</p>
+                            </div>
+                            <div class="flex justify-center flex-direction-column align-items-center py-4 px-4 bg-gray-800">
+                                <div class="icon-box flex align-items-center">
+                                    <img class="max-h-ico" alt="business process model and notation" data-src="img/logos/bpmn.svg" width="64" />
+                                </div>
+                                <p class="text-gray-500 text-bottom-ico mt-3">BPMN</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END: technologies -->
+
+                <!-- Section contact -->
+                <div id="contact" class="bg-gray-900">
+                    <div class="max-w-7xl mx-auto px-4 pt-12 pb-6 sm:px-6 lg:py-16 lg:px-8">
+                        <div class="py-10 px-6 bg-primary-100 rounded-3xl sm:py-16 sm:px-12 lg:p-20 lg:flex lg:items-center">
+                            <!-- Left panel -->
+                            <div class="lg:w-0 lg:flex-1 flex flex-direction-column align-items-center">
+                                <div>
+                                    <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">Employment Preferences</h2>
+                                    <p class="mt-4 max-w-3xl text-lg text-gray-900">
+                                        I am actively seeking full-time employment opportunities. Open to both permanent and internship roles with
+                                        potential for subsequent full-time employment. Comfortable with both on-site and remote work arrangements.
+                                    </p>
+                                </div>
+                                <a
+                                    href="files/cv-krzysztof-zygmunt-en.pdf"
+                                    class="text-center w-64 mt-6 px-5 py-3 border border-transparent text-sm font-medium rounded-md text-white bg-black hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-700 focus:ring-white">
+                                    Download my CV
+                                </a>
+                                <a
+                                    href="files/cv-krzysztof-zygmunt-no.pdf"
+                                    class="text-center w-64 mt-6 px-5 py-3 border border-transparent text-sm font-medium rounded-md text-white bg-black hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-700 focus:ring-white">
+                                    Last ned CVen min
+                                </a>
+                                <a
+                                    href="files/cv-krzysztof-zygmunt-pl.pdf"
+                                    class="text-center w-64 mt-6 px-5 py-3 border border-transparent text-sm font-medium rounded-md text-white bg-black hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-700 focus:ring-white">
+                                    Pobierz moje CV
+                                </a>
+                            </div>
+                            <!-- END: Left panel -->
+
+                            <!-- Right panel -->
+                            <div class="text-sm mt-12 sm:w-full sm:text-xl lg:mt-0 lg:ml-8 lg:flex-1 flex justify-center align-items-center">
+                                <table class="border-collapse">
+                                    <tr>
+                                        <td class="text-right font-bold pr-2">E-mail:</td>
+                                        <td>
+                                            <a href="mailto:chris@onoo.no" class="underline">chris@onoo.no</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-right font-bold pr-2">WWW:</td>
+                                        <td>
+                                            <a href="https://onoo.no" class="underline" target="_blanc">onoo.no</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-right font-bold pr-2">GitHub:</td>
+                                        <td>
+                                            <a href="https://github.com/chrisonoo" class="underline" target="_blanc">github.com/chrisonoo</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-right font-bold pr-2">LinkedIn:</td>
+                                        <td>
+                                            <a href="https://www.linkedin.com/in/k-p-z/" class="underline" target="_blanc">linkedin.com/in/k-p-z</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!-- END: Right panel -->
+                        </div>
+                    </div>
+                </div>
+                <!-- END: Section contact -->
+            </main>
+
+            <!-- Section footer -->
+            <div class="bg-gray-900">
+                <div class="max-w-screen-xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                    <!-- Section copyright -->
+                    <div class="border-t border-gray-700">
+                        <p class="pt-8 text-base text-center leading-6 text-gray-400 md:mt-0 md:order-1">
+                            Copyright © 2023 onoo.no Krzysztof Zygmunt
+                        </p>
+                    </div>
+                    <!-- END: Section copyright -->
+                </div>
+            </div>
+            <!-- END: Section footer -->
+        </div>
+    </body>
+</html>

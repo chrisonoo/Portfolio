@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.max-h-ico {
+    max-height: 3rem;
+    max-width: 3rem;
+}
+
+.text-bottom-ico {
+    line-height: 0.8rem;
+    font-size: 0.8rem;
+}
+
+.icon-box {
+    margin-top: 0.4rem;
+    max-width: 3rem;
+    height: 3rem;
+    max-height: 3rem;
+}
+
+.flex-grow-2 {
+    flex-grow: 2;
+}
+
+.flex-grow-3 {
+    flex-grow: 3;
+}
+
+.gap-2 {
+    grid-gap: 0.5rem;
+    gap: 0.5rem;
+}
+
+.display-none {
+    display: none;
+}
+
+@media (min-width: 1280px) {
+    .xl\:block {
+        display: block;
+    }
+
+    .nav-fixed {
+        position: fixed;
+        background: rgb(22, 30, 46);
+        z-index: 10;
+        width: 100%
+    }
+}
+
+.accent-bold{
+    color: #fcd270e7;
+}
+
+.accent-link{
+    color: #f3f5f7;
+}
