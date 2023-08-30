@@ -46,6 +46,9 @@
                                 <a href="#about-me"
                                     class="text-gray-300 hover:text-primary-200 px-3 py-2 text-sm font-medium transition ease-out duration-300">About
                                     Me</a>
+                                <a href="#main-project"
+                                    class="text-gray-300 hover:text-primary-200 px-3 py-2 text-sm font-medium transition ease-out duration-300">Main
+                                    Project</a>
                                 <a href="#my-projects"
                                     class="text-gray-300 hover:text-primary-200 px-3 py-2 text-sm font-medium transition ease-out duration-300">My
                                     Projects</a>
@@ -98,6 +101,19 @@
                                 stroke-linejoin="round" stroke-width="2"></path>
                         </svg>
                         <span class="ml-2">About Me</span>
+                    </a>
+                    <a href="#main-project" class="text-white flex items-center px-3 py-3 text-base font-medium" target="">
+                        <svg class="flex-shrink-0 h-6 w-6 text-primary-100" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                            <path
+                                d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z">
+                            </path>
+                            <path
+                                d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                        </svg>
+                        <span class="ml-2">Main Project</span>
                     </a>
                     <a href="#my-projects" class="text-white flex items-center px-3 py-3 text-base font-medium" target="">
                         <svg class="flex-shrink-0 h-6 w-6 text-primary-100" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -179,7 +195,7 @@
                                 <p class="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
                                     Having finished my university studies in <span class="font-bold accent-bold">Business Application
                                         Programming</span>, I'm now focusing on my bachelor's
-                                    thesis, which I plan to defend later this year. Continually inspired by the vast landscape of programming, it's
+                                    thesis. Continually inspired by the vast landscape of programming, it's
                                     fair to say I'm soaring high with every line of code!
                                 </p>
                                 <div class="mt-10 sm:mt-12">
@@ -202,7 +218,265 @@
                     </div>
                 </div>
             </div>
-            <!-- END: Section looking -->
+            <!-- END: Section About Me -->
+
+            <!-- Section Main Project -->
+            <div id="main-project" class="bg-gray-800">
+                <div class="max-w-4xl mx-auto px-4 pt-16 sm:px-6 sm:pt-20 lg:max-w-7xl lg:pt-24 lg:px-8">
+                    <!-- Main Project Details -->
+                    <div>
+                        <h2 class="text-3xl font-extrabold text-white tracking-tight">
+                            <span>Main</span>
+                            <span class="text-primary-100">Project</span>
+                        </h2>
+
+                        <div class="grid grid-cols-1 gap-y-3 gap-x-3 sm:grid-cols-2">
+                            <div class="prose text-gray-300 m-4 mb-8">
+                                <p>
+                                    <span class="block text-xl font-bold text-gray-50">Service Radar </span>
+                                </p>
+                                <img data-src="img/projects/service-radar-screenshot.jpeg" alt="service radar screenshot">
+                                <p>
+                                    The project was built on <span class="font-bold accent-bold">ASP.NET Core 7 MVC</span>. My main focus was on the
+                                    <span class="font-bold accent-bold">Backend</span> and
+                                    learning key elements of modern
+                                    applications. I utilized a standard Frontend template with minor color modifications. I also added a <span
+                                        class="font-bold accent-bold">Floating
+                                        Action Button (FAB)</span>, and a connected <span class="font-bold accent-bold">modal window</span> displays
+                                    crucial information needed for testing the application.
+                                </p>
+                                <div>
+                                    <div class="mt-4 sm:mt-4 button-style">
+                                        <a href="https://radar.onoo.app"
+                                            class="py-2 px-3 rounded-md shadow bg-primary-100 font-medium hover:bg-primary-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 focus:ring-offset-gray-900">
+                                            <img data-src="img/projects/service-radar-logo.svg" alt="service radar logo">
+                                            Online Demo</a>
+                                    </div>
+                                    <div class="mt-4 sm:mt-4 button-style">
+                                        <a href="https://github.com/chrisonoo/ServiceRadar"
+                                            class="py-2 px-3 rounded-md shadow bg-primary-100 font-medium hover:bg-primary-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 focus:ring-offset-gray-900">
+                                            <img data-src="img/projects/github.svg" alt="github logo">
+                                            On GitHub</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="prose text-gray-300 m-4 list-style">
+                                <p>
+                                    <span class="block text-xl font-bold text-gray-50">Main Application Areas</span>
+                                </p>
+                                <ol>
+                                    <li>Architecture and Design Patterns
+                                        <ul>
+                                            <li>Project Structure (<span class="font-bold accent-bold">Onion Architecture</span>)</li>
+                                            <li>Design Patterns (<span class="font-bold accent-bold">MVC</span>, <span
+                                                    class="font-bold accent-bold">CQRS</span>, <span class="font-bold accent-bold">CRUD</span>, <span
+                                                    class="font-bold accent-bold">SOLID</span>, <span class="font-bold accent-bold">DTO</span>, <span
+                                                    class="font-bold accent-bold">DAO</span>, <span class="font-bold accent-bold">ViewModel</span>)
+                                            </li>
+                                            <li><span class="font-bold accent-bold">Dependency Injection</span>, <span
+                                                    class="font-bold accent-bold">Extension Methods</span></li>
+                                        </ul>
+                                    </li>
+                                    <li>Security and Access
+                                        <ul>
+                                            <li>Authentication & Authorization using <span class="font-bold accent-bold">ASP.NET Core Identity</span>
+                                            </li>
+                                            <li>Resource Authorization Mechanisms (<span class="font-bold accent-bold">Roles</span> and <span
+                                                    class="font-bold accent-bold">Claims</span>)</li>
+                                        </ul>
+                                    </li>
+                                    <li>Testing
+                                        <ul>
+                                            <li>Unit Testing - tools: <span class="font-bold accent-bold">xUnit</span>, <span
+                                                    class="font-bold accent-bold">Moq</span></li>
+                                            <li>Integration Testing - tools: <span class="font-bold accent-bold">xUnit</span>, <span
+                                                    class="font-bold accent-bold">Moq</span></li>
+                                        </ul>
+                                    </li>
+                                    <li>Deployment and Hosting
+                                        <ul>
+                                            <li>Production version of the application online on <span class="font-bold accent-bold">.NET
+                                                    hosting</span></li>
+                                            <li>Purchase and configuration of <span class="font-bold accent-bold">domain</span> and <span
+                                                    class="font-bold accent-bold">subdomain</span></li>
+                                        </ul>
+                                    </li>
+                                    <li>Development Tools
+                                        <ul>
+                                            <li><span class="font-bold accent-bold">Visual Studio</span> 2022</li>
+                                            <li>SQL Server <span class="font-bold accent-bold">Management Studio</span> 19</li>
+                                            <li><span class="font-bold accent-bold">Git</span> and <span class="font-bold accent-bold">GitHub</span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>Project Management and Documentation
+                                        <ul>
+                                            <li><span class="font-bold accent-bold">Full application lifecycle</span> from concept, through planning,
+                                                implementation to deployment and
+                                                documentation.</li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </div>
+                            <div class="prose text-gray-300 m-4 list-style">
+                                <p>
+                                    <span class="block text-xl font-bold text-gray-50">Backend</span>
+                                </p>
+                                <ol>
+                                    <li>Programming Languages and Frameworks
+                                        <ul>
+                                            <li><span class="font-bold accent-bold">C#</span> v10</li>
+                                            <li><span class="font-bold accent-bold">ASP.NET Core 7</span></li>
+                                            <li><span class="font-bold accent-bold">Entity Framework</span> Core</li>
+                                        </ul>
+                                    </li>
+                                    <li>Libraries and Tools
+                                        <ul>
+                                            <li><span class="font-bold accent-bold">AutoMapper</span> - Object-Object Mapping</li>
+                                            <li><span class="font-bold accent-bold">MediatR</span> - Request/Response Messaging</li>
+                                            <li><span class="font-bold accent-bold">FluentValidation</span> - Chainable Validations</li>
+                                            <li><span class="font-bold accent-bold">xUnit</span> and <span class="font-bold accent-bold">Moq</span> -
+                                                Unit Testing/Mocking</li>
+                                            <li><span class="font-bold accent-bold">BuildWebCompiler</span> - SCSS/JS Minification</li>
+
+                                        </ul>
+                                    </li>
+                                    <li>Databases
+                                        <ul>
+                                            <li><span class="font-bold accent-bold">SQL</span></li>
+                                            <li><span class="font-bold accent-bold">CodeFirst</span> Approach</li>
+                                            <li><span class="font-bold accent-bold">Seeding</span></li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </div>
+                            <div class="prose text-gray-300 m-4 list-style">
+                                <p>
+                                    <span class="block text-xl font-bold text-gray-50">Frontend</span>
+                                </p>
+                                <ol>
+                                    <li>Core Technologies
+                                        <ul>
+                                            <li><span class="font-bold accent-bold">HTML</span></li>
+                                            <li><span class="font-bold accent-bold">CSS</span> (SASS)</li>
+                                            <li><span class="font-bold accent-bold">JavaScript</span></li>
+                                        </ul>
+                                    </li>
+                                    <li>Libraries and Tools
+                                        <ul>
+                                            <li><span class="font-bold accent-bold">Bootstrap</span> - My Custom Module Set</li>
+                                            <li><span class="font-bold accent-bold">toastr</span> - Notifications</li>
+                                            <li><span class="font-bold accent-bold">Ajax</span> - Data Retrieval and Addition</li>
+                                            <li><span class="font-bold accent-bold">Node.js</span> - Autoprefixer, browserlist</li>
+                                        </ul>
+                                    </li>
+                                    <li>Interactions and UX/UI
+                                        <ul>
+                                            <li><span class="font-bold accent-bold">Modal</span> Windows</li>
+                                            <li><span class="font-bold accent-bold">Floating Action Button</span> (FAB)</li>
+                                            <li><span class="font-bold accent-bold">Notifications</span> via toastr</li>
+                                            <li><span class="font-bold accent-bold">Validation</span> (FluentValidation)</li>
+                                            <li><span class="font-bold accent-bold">Responsive</span> Template</li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Main Project Details -->
+                </div>
+            </div>
+            <!-- END: Section Main Project -->
+
+            <!-- Section Next Project -->
+            <div id="next-project" class="bg-gray-800">
+                <div class="max-w-4xl mx-auto px-4 pt-16 sm:px-6 sm:pt-20 lg:max-w-7xl lg:pt-24 lg:px-8">
+                    <!-- Next Project Details-->
+                    <div>
+                        <h2 class="text-3xl font-extrabold text-white tracking-tight">
+                            <span>Next</span>
+                            <span class="text-primary-100">Project (In&nbsp;Development)</span>
+                        </h2>
+
+                        <div class="grid grid-cols-1 gap-y-3 gap-x-3 sm:grid-cols-2">
+                            <div class="prose text-gray-300 m-4 mb-8">
+                                <p>
+                                    <span class="block text-xl font-bold text-gray-50">Gym Manager</span>
+                                </p>
+                                <img data-src="img/projects/gym-manager.png" alt="gym manager">
+                                <p>
+                                    A comprehensive gym management application. The codebase is organized around <span
+                                        class="font-bold accent-bold">Onion Architecture</span>. The application
+                                    is built on <span class="font-bold accent-bold">ASP.NET Core 6 MVC</span>, and some elements also use <span
+                                        class="font-bold accent-bold">ASP.NET Core 6 Web API</span>. Advanced features include
+                                    <span class="font-bold accent-bold">payment</span> processing, <span class="font-bold accent-bold">PDF</span>
+                                    generation, request <span class="font-bold accent-bold">logging</span>, and <span
+                                        class="font-bold accent-bold">application performance
+                                        monitoring</span>.
+                                </p>
+                                <div>
+                                    <div class="mt-4 sm:mt-4 button-style">
+                                        <a href="https://gym.onoo.app"
+                                            class="py-2 px-3 rounded-md shadow bg-primary-100 font-medium hover:bg-primary-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 focus:ring-offset-gray-900">
+                                            <img data-src="img/projects/gym-manager-logo.svg" alt="gym manager logo">
+                                            Online Demo</a>
+                                    </div>
+                                    <div class="mt-4 sm:mt-4 button-style">
+                                        <a href="https://github.com/chrisonoo/GymManager"
+                                            class="py-2 px-3 rounded-md shadow bg-primary-100 font-medium hover:bg-primary-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 focus:ring-offset-gray-900">
+                                            <img data-src="img/projects/github.svg" alt="github logo">
+                                            On GitHub</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="prose text-gray-300 m-4 list-style">
+                                <p>
+                                    <span class="block text-xl font-bold text-gray-50">Main Application Areas</span>
+                                </p>
+                                <ol>
+                                    <li>New Features in the Application
+                                        <ul>
+                                            <li>Full <span class="font-bold accent-bold">CRUD</span> implementation with <span
+                                                    class="font-bold accent-bold"></span>soft delete</li>
+                                            <li><span class="font-bold accent-bold">Globalization</span> - Language change in interface </li>
+                                            <li><span class="font-bold accent-bold">Sorting</span>, <span
+                                                    class="font-bold accent-bold">filtering</span>, <span
+                                                    class="font-bold accent-bold">pagination</span> of displayed data</li>
+                                            <li><span class="font-bold accent-bold">Displaying deleted data</span> (soft delete)</li>
+                                            <li>Usage of <span class="font-bold accent-bold">ASP.NET Core 6 Web API</span> for certain application
+                                                elements</li>
+                                            <li>User action <span class="font-bold accent-bold">logging</span></li>
+                                            <li>Application performance <span class="font-bold accent-bold">monitoring</span></li>
+                                            <li>Global <span class="font-bold accent-bold">exception handling</span></li>
+                                            <li><span class="font-bold accent-bold">Middleware</span></li>
+                                            <li>Email <span class="font-bold accent-bold">sending</span></li>
+                                            <li><span class="font-bold accent-bold">PDF</span> generation</li>
+                                            <li><span class="font-bold accent-bold">Payment</span> handling on test API</li>
+                                            <li>Client Dashboard <span class="font-bold accent-bold">statistics</span> and <span
+                                                    class="font-bold accent-bold">graphs</span></li>
+                                            <li><span class="font-bold accent-bold">File uploads</span> to server</li>
+                                            <li><span class="font-bold accent-bold">Calendar</span> module</li>
+                                            <li>Generating passes in <span class="font-bold accent-bold">QR code</span> format"</li>
+                                        </ul>
+                                    </li>
+                                    <li>Expanding Features in the Application
+                                        <ul>
+                                            <li>Utilization of all elements from Main Project</li>
+                                            <li>More elaborate frontend, <span class="font-bold accent-bold">separate template</span> for application
+                                                and admin module</li>
+                                            <li>Detailed unit and integration <span class="font-bold accent-bold">tests</span></li>
+                                            <li>Advanced <span class="font-bold accent-bold">Authentication</span> and <span
+                                                    class="font-bold accent-bold">Authorization</span></li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END: Next Project Details-->
+                </div>
+            </div>
+            <!-- END: Section Next Project -->
 
             <!-- Section My Projects -->
             <div id="my-projects" class="bg-gray-800">
@@ -210,12 +484,13 @@
                     <!-- Introduction -->
                     <div>
                         <h2 class="text-3xl font-extrabold text-white tracking-tight">
-                            <span>My</span>
+                            <span>My Other</span>
                             <span class="text-primary-100">Projects</span>
                         </h2>
                         <p class="mt-4 max-w-3xl text-lg text-gray-300">
                             Here's a showcase of my coding adventures from
-                            <a href="https://www.wsb-nlu.edu.pl/en/about-wsb-nlu" class="underline accent-link">WSB - National Louis University</a>,
+                            <a href="https://www.wsb-nlu.edu.pl/en/about-wsb-nlu" class="underline accent-link">WSB - National Louis
+                                University</a>,
                             <a href="https://www.getacademy.no/" class="underline accent-link">GetAcademy</a> and
                             <a href="https://jobloop.no/kodehode-modellen" class="underline accent-link">Kodehode (It utvikler AMO)</a>.
                         </p>
@@ -227,12 +502,12 @@
                             <br />
                             <img class="" alt="completed project" data-src="img/projects/completed-project.svg"
                                 style="width: 32px; display: inline" />
-                            - Completed Projects<br />
+                            - Completed Project<br />
                             <img class="" alt="projects under development" data-src="img/projects/projects-under-development.svg"
                                 style="width: 32px; display: inline" />
-                            - Projects Under Development<br />
+                            - Project Under Development<br />
                             <img class="" alt="planned projects" data-src="img/projects/planned-projects.svg" style="width: 32px; display: inline" />
-                            - Planned Projects
+                            - Planned Project
                         </p>
                     </div>
                     <!-- END: Introduction -->
@@ -249,7 +524,7 @@
                                 <h3 class="mb-4 text-lg font-medium text-white">Gym Manager</h3>
                                 <div style="position: relative">
                                     <img class="" alt="gym manager" data-src="img/projects/gym-manager.png" />
-                                    <img alt="completed project" data-src="img/projects/planned-projects.svg"
+                                    <img alt="completed project" data-src="img/projects/projects-under-development.svg"
                                         style="position: absolute; bottom: 8px; right: 8px; width: 48px" />
                                 </div>
                                 <p class="mt-3 text-base text-gray-300">
@@ -277,7 +552,7 @@
                                 <h3 class="mb-4 text-lg font-medium text-white">Service Radar</h3>
                                 <div style="position: relative">
                                     <img class="" alt="service radar" data-src="img/projects/service-radar.png" />
-                                    <img alt="completed project" data-src="img/projects/projects-under-development.svg"
+                                    <img alt="completed project" data-src="img/projects/completed-project.svg"
                                         style="position: absolute; bottom: 8px; right: 8px; width: 48px" />
                                 </div>
                                 <p class="mt-3 text-base text-gray-300">
@@ -527,7 +802,7 @@
                 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
                     <div class="relative pt-4 pb-4 sm:pt-12">
                         <!-- Skill modules -->
-                        <div class="mt-8 grid grid-cols-1 gap-y-12 gap-x-6 sm:grid-cols-2">
+                        <div class="mt-8 grid grid-cols-1 gap-y-3 gap-x-3 sm:grid-cols-2">
                             <div class="prose text-gray-300 m-4">
                                 <p>
                                     <span class="block text-xl font-bold text-gray-50">Core Competencies</span>

@@ -55,10 +55,36 @@
     }
 }
 
-.accent-bold{
+.accent-bold {
     color: #fcd270e7;
 }
 
-.accent-link{
+.accent-link {
     color: #f3f5f7;
+}
+
+.button-style a {
+    display: block;
+    color: #161e2e !important;
+    width: 170px;
+    margin: auto;
+    text-align: center;
+}
+
+.button-style img {
+    display: inline-block;
+    margin: -3px 5px 0 0;
+    width: 24px;
+}
+
+.list-style li {
+    margin: 0;
+}
+
+.list-style ol>li>:first-child {
+    margin-top: 0 !important;
+}
+
+.list-style ol>li>:last-child {
+    margin-bottom: 0.75em !important;
 }
